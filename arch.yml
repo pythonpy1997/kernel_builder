@@ -20,5 +20,5 @@ jobs:
       - name: build
         run: |
           sudo pacman -Syu --noconfirm wget git openmp base-devel bc zip
-          wget https://raw.githubusercontent.com/username/repo/branch/build.sh
+          wget source https://github.com/AbzRaider/kernel_builder/blob/main/build.sh
           bash build.sh
