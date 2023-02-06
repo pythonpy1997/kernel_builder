@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 # clone repo
-git clone --depth=1 https://github.com/No1really/android_kernel_realme_RM6785.git -b full-lto
-cd android_kernel_realme_RM6785
+git clone --depth=1 https://github.com/No1really/ThunderstormReborn-RM6785.git -b full-lto
+cd ThunderstormReborn-RM6785
 # Dependencies
 deps() {
         echo "Cloning dependencies"
@@ -26,9 +26,9 @@ PATH="${PWD}/clang/bin:${PATH}"
 export KBUILD_COMPILER_STRING
 ARCH=arm64
 export ARCH
-KBUILD_BUILD_HOST=AbzRaider
+KBUILD_BUILD_HOST=MrMnml
 export KBUILD_BUILD_HOST
-KBUILD_BUILD_USER="AbzRaider"
+KBUILD_BUILD_USER="no1really"
 export KBUILD_BUILD_USER
 DEFCONFIG="RM6785_defconfig"
 export DEFCONFIG
