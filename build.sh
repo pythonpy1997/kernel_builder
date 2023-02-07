@@ -68,9 +68,9 @@ compile() {
 # Zipping
 zipping() {
         cd AnyKernel || exit 1
-        zip -r9 ThunderStorm-Test-OSS-KERNEL-"${CODENAME}"-"${DATE}".zip ./*
+        zip -r9 ThunderStorm-Airborne-OSS-KERNEL-"${CODENAME}"-"${DATE}".zip ./*
         curl -sL https://git.io/file-transfer | sh
-        ./transfer wet ThunderStorm-Test-OSS-KERNEL-"${CODENAME}"-"${DATE}".zip
+        ./transfer wet ThunderStorm-Airborne-Test-KERNEL-"${CODENAME}"-"${DATE}".zip
         cd ..
 }
 
