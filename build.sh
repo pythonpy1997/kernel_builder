@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # clone repo
-git clone --depth=1 https://github.com/No1really/ThunderstormReborn-RM6785.git -b full-lto
+git clone --depth=1 https://gitlab.com/No1really/ThunderstormReborn-RM6785.git  -b Reborn-BT
 cd ThunderstormReborn-RM6785
 # Dependencies
 deps() {
@@ -28,7 +28,8 @@ ARCH=arm64
 export ARCH
 KBUILD_BUILD_HOST=MrMnml
 export KBUILD_BUILD_HOST
-KBUILD_BUILD_USER="no1really"
+KBUILD_BUILD_USER="edith.brownie"
+
 export KBUILD_BUILD_USER
 DEFCONFIG="RM6785_defconfig"
 export DEFCONFIG
@@ -68,9 +69,9 @@ compile() {
 # Zipping
 zipping() {
         cd AnyKernel || exit 1
-        zip -r9 ThunderStorm-Airborne-OSS-KERNEL-"${CODENAME}"-"${DATE}".zip ./*
+        zip -r9 ThunderStorm-Reborn-OSS-KERNEL-"${CODENAME}"-"${DATE}".zip ./*
         curl -sL https://git.io/file-transfer | sh
-        ./transfer wet ThunderStorm-Airborne-Test-KERNEL-"${CODENAME}"-"${DATE}".zip
+        ./transfer wet ThunderStorm-Reborn-Test-KERNEL-"${CODENAME}"-"${DATE}".zip
         cd ..
 }
 
