@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 # clone repo
-git clone --depth=1 https://gitlab.com/No1really/ThunderstormReborn-RM6785.git  -b Reborn-BT
-cd ThunderstormReborn-RM6785
+git clone --depth=1 https://github.com/pythonpy1997/android_kernel_realme_mt6785.git  -b lineage-20
+cd android_kernel_realme_mt6785
 # Dependencies
 deps() {
         echo "Cloning dependencies"
@@ -28,7 +28,7 @@ ARCH=arm64
 export ARCH
 KBUILD_BUILD_HOST=MrMnml
 export KBUILD_BUILD_HOST
-KBUILD_BUILD_USER="edith.brownie"
+KBUILD_BUILD_USER="pythonpy1997"
 
 export KBUILD_BUILD_USER
 DEFCONFIG="RM6785_defconfig"
@@ -63,15 +63,15 @@ compile() {
                 exit 1
         fi
 
-        git clone --depth=1 https://github.com/anupamroy777/AnyKernel33.git AnyKernel
+        git clone --depth=1 https://github.com/pythonpy1997/AnyKernel33.git AnyKernel
         cp out/arch/arm64/boot/Image.gz-dtb AnyKernel
 }
 # Zipping
 zipping() {
         cd AnyKernel || exit 1
-        zip -r9 ThunderStorm-Reborn-OSS-KERNEL-"${CODENAME}"-"${DATE}".zip ./*
+        zip -r9 Aurora地平線-OSS-KERNEL-"${CODENAME}"-"${DATE}".zip ./*
         curl -sL https://git.io/file-transfer | sh
-        ./transfer wet ThunderStorm-Reborn-Test-KERNEL-"${CODENAME}"-"${DATE}".zip
+        ./transfer wet Aurora地平線-Test-KERNEL-"${CODENAME}"-"${DATE}".zip
         cd ..
 }
 
